@@ -1,0 +1,10 @@
+.gifButton {
+  width: 100px;
+  margin: 0 5px;
+  background-color: yellow;
+  border-style: none;
+}
+
+.gifButton:hover {
+  background-color: blue;
+}
