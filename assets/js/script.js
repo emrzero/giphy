@@ -4,12 +4,12 @@ var topics = [
   "babies",
   "fail",
   "surprise",
-  "fear",
+  "scary",
   "funny"
 ]
 
 
-function initPage(){
+function initButtons(){
   topics.forEach(printButton);
   btnEventListener();
 }
@@ -84,11 +84,26 @@ function gifEventListener (){
   });
 }
 
-$('#btnAdd').on('click', function(){
-  topics.push($('#txtAdd').val());
-  $('#buttons').empty();
-  initPage();
-  return false;
+$("#txtAdd").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#btnAdd").click();
+    }
 });
 
-initPage();
+$('#btnAdd').on('click', function(){
+  var newEntry = $('#txtAdd').val();
+
+  if (topics.indexOf(newEntry) > -1){
+    alert('Category already exists');
+    $('#txtAdd').val('');
+  }
+  else if (newEntry != ''){
+    topics.push(newEntry);
+    $('#txtAdd').val('');
+    $('#buttons').empty();
+    initButtons();
+    return false;
+  }
+});
+
+initButtons();

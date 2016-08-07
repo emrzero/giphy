@@ -1,14 +1,35 @@
+button {
+    border-style: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+#sectionAdd {
+  margin: 2px 5px;
+}
+
+#sectionAdd > button {
+  background-color: #FF3100;
+  width: 100px;
+}
+
+#sectionAdd > button:hover {
+  background-color: #FF5F39;
+}
+
 .gifContainer {
   display: inline-block;
+  margin: 0 10px;
 }
 
 .gifButton {
   width: 100px;
-  margin: 0 5px;
-  background-color: yellow;
-  border-style: none;
+  margin: 2px 5px;
+  background-color: #FFE039;
 }
 
 .gifButton:hover {
-  background-color: blue;
+  background-color: #FFAD39;
 }
