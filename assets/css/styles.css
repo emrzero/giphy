@@ -1,3 +1,7 @@
+.gifContainer {
+  display: inline-block;
+}
+
 .gifButton {
   width: 100px;
   margin: 0 5px;
