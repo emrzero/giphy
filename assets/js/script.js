@@ -41,7 +41,7 @@ function retrieveGifs () {
 
       var newG = $('<img>');
       newG.addClass('gifBox');
-      newG.data('state', 'still');
+      newG.data('state', 'animate');
       newG.data('still', response.data[i].images.fixed_height_still.url);
       newG.data('animate', response.data[i].images.fixed_height.url)
       newG.attr('src', newG.data('animate'));
