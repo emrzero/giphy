@@ -44,7 +44,7 @@ function retrieveGifs () {
       newG.data('state', 'still');
       newG.data('still', response.data[i].images.fixed_height_still.url);
       newG.data('animate', response.data[i].images.fixed_height.url)
-      newG.attr('src', newG.data('still'));
+      newG.attr('src', newG.data('animate'));
       newDiv.append(newG);
 
       $('#gifs').append(newDiv);
