@@ -3,7 +3,7 @@ button {
 }
 
 button:focus {
-  outline: 0;
+  outline-color: #FF3100;
 }
 
 #sectionAdd {

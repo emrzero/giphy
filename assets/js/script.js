@@ -41,10 +41,10 @@ function retrieveGifs () {
 
       var newG = $('<img>');
       newG.addClass('gifBox');
-      newG.data('state', 'animate');
+      newG.data('state', 'still');
       newG.data('still', response.data[i].images.fixed_height_still.url);
       newG.data('animate', response.data[i].images.fixed_height.url)
-      newG.attr('src', newG.data('animate'));
+      newG.attr('src', newG.data('still'));
       newDiv.append(newG);
 
       $('#gifs').append(newDiv);
@@ -65,6 +65,7 @@ function ajaxCall (bClicked){
 function btnEventListener(){
   $('.gifButton').on('click', function(){
     $('#gifs').empty();
+    $(this).attr('background-color', '#FF3100');
     ajaxCall($(this).val());
   });
 }
