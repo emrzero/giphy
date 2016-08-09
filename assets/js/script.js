@@ -51,6 +51,11 @@ function retrieveGifs () {
   }
     gifEventListener();
 
+    var newH = $('<h3>');
+    newH.addClass('instructions');
+    newH.html('Click on image to animate');
+    $('#gifs').prepend(newH);
+
   });
 }
 

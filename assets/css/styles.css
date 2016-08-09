@@ -1,5 +1,18 @@
+* {
+  text-align: center;
+}
+
+body {
+  background-image: url('../images/stardust.png');
+}
+
+h1, h2, h3, h4, p {
+  color: white;
+}
+
 button {
     border-style: none;
+    border-radius: 5px;
 }
 
 button:focus {
@@ -7,7 +20,7 @@ button:focus {
 }
 
 #sectionAdd {
-  margin: 2px 5px;
+  margin: 10px 5px;
 }
 
 #sectionAdd > button {
